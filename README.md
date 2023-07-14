@@ -5,7 +5,9 @@ In the assets folder there is a n screenshot of the look of the website.
 
 
 The link of the repo is:
+https://github.com/Quark030/work-day-scheduler.git
 
 
 The link of the deployed website is:
+https://quark030.github.io/work-day-scheduler/
 
