@@ -1,3 +1,5 @@
+
+// Calling elements
 $(document).ready(function() {
   const saveButton = $(".saveBtn");
   const currentDayElement = $("#currentDay");
@@ -9,11 +11,11 @@ $(document).ready(function() {
   function updateContainerColors() {
     var currentHour = new Date().getHours();
 
-    // Recorrer los contenedores de 9AM a 5PM dentro del contenedor principal
+    // Move hour values to  container
     for (var hour = 9; hour <= 17; hour++) {
       var container = $("#hour-" + hour);
 
-      // Asignar clase según la hora actual
+      // assign class to container
       if (hour < currentHour) {
         container.removeClass("present future").addClass("past");
       } else if (hour === currentHour) {
@@ -26,6 +28,8 @@ $(document).ready(function() {
 
   updateContainerColors();
 
+ // Saving data and replace container hour, obtain input text  and save on localStorage
+
   saveButton.on("click", function() {
     var hour = $(this).parent().attr("id").replace("hour-", "");
     var textArea = $(this).siblings(".description");
@@ -35,7 +39,7 @@ $(document).ready(function() {
     localStorage.setItem(hour, text);
   });
 
-  // Cargar los datos guardados en localStorage
+  // Load saved data 
   function loadSavedData() {
     for (var hour = 9; hour <= 17; hour++) {
       var text = localStorage.getItem(hour);

@@ -9,5 +9,5 @@ https://github.com/Quark030/work-day-scheduler.git
 
 
 The link of the deployed website is:
-https://quark030.github.io/work-day-scheduler/
+ https://quark030.github.io/work-day-scheduler/
 
